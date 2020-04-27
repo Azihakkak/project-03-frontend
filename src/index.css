@@ -1,4 +1,6 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +12,105 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+
+html, body {
+
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+}
+
+.navbar {
+  padding: 0.8rem;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+}
+
+.main-img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption h1 {
+  text-shadow: 1px 1px 10px #000;
+}
+
+.carousel-caption h3 {
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #000;
+}
+
+#button {
+  background-color: #7e89d6;
+  border: 1px solid #7e89d6;
+}
+
+#button:hover {
+  background-color: #5c67b7;
+  border: 1px solid #5c67b7;
+}
+
+.jumbotron {
+  padding: 1rem!important;
+  border-radius: 0;
+  text-align: center;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+#welcome {
+  border-top: 2px solid #b4b4b4;
+  width: 65%;
+  margin-top: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+#lp-card {
+  background: #d4b06f;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.social a {
+  font-size: 2em;
+  padding: 2rem;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
+  color: #d5d5d5;
+}
+
+#connect {
+  padding-top: 3rem;
+  padding-bottom: 0;
+}
+
+[class*="col-"] {
+  padding: 1rem;
 }
