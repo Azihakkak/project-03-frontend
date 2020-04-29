@@ -10,12 +10,16 @@ import {
   FormControl,
   Container
 } from 'react-bootstrap';
+
+
+
 export default class Navigation extends Component {
 
 
-
   handleClick = () => {
-      axios.delete('http://localhost:3001/logout', {withCredentials: true})
+    // const SERVER_URL = 'http://localhost:3001/logout';
+    const SERVER_URL = 'https://glam-b.herokuapp.com/logout';
+      axios.delete(SERVER_URL, {withCredentials: true})
       .then(response => {
         this.props.handleLogout()
         this.props.history.push('/')

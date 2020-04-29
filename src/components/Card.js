@@ -19,7 +19,8 @@ export default class Card extends Component {
     }
 
     fetchAppointments = () => {
-      const SERVER_URL = `http://localhost:3001/appointments/user/${this.props.user.id}`;
+      // const SERVER_URL = `http://localhost:3001/appointments/user/${this.props.user.id}`;
+      const SERVER_URL = `https://glam-b.herokuapp.com/appointments/user/${this.props.user.id}`;
       axios.get(SERVER_URL, {withCredentials: true}).then((results) => {
         this.setState({
 

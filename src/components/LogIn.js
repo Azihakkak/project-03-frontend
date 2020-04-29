@@ -33,7 +33,9 @@ export default class LogIn extends Component {
         password: password
   }
 
-  axios.post('http://localhost:3001/login', {user}, {withCredentials: true})
+  // const SERVER_URL = 'http://localhost:3001/login';
+  const SERVER_URL = 'https://glam-b.herokuapp.com/login';
+  axios.post(SERVER_URL, {user}, {withCredentials: true})
       .then(response => {
         if (response.data.logged_in) {
           this.props.handleLogin(response.data)

@@ -18,7 +18,8 @@ componentDidMount() {
 }
 
 fetchServices = () => {
-  const SERVER_URL = 'http://localhost:3001/services';
+  // const SERVER_URL = 'http://localhost:3001/services';
+  const SERVER_URL = 'https://glam-b.herokuapp.com/services';
   this.setState({...this.state, isFetching: true})
   axios.get(SERVER_URL, {withCredentials: true}).then(results => {
     this.setState({

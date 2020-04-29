@@ -19,18 +19,19 @@ class App extends Component {
     super(props);
     this.state = {
       isLoggedIn: true,
-      user: {admin: true, email: "azi@gmail.com", id: 39, name: "Azi"}
+      user: {}
     }
   }
 
   componentDidMount() {
     // fix this later with aleks
-    // this.loginStatus()
+    this.loginStatus()
   }
 
   loginStatus = () => {
-    axios.get('http://localhost:3001/logged_in',
-   {withCredentials: true})
+    // const SERVER_URL = 'http://localhost:3001/logged_in';
+    const SERVER_URL = 'https://glam-b.herokuapp.com/logged_in';
+    axios.get(SERVER_URL, {withCredentials: true})
     .then(response => {
       if (response.data.logged_in) {
         this.handleLogin(response)

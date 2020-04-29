@@ -17,7 +17,8 @@ componentDidMount() {
 }
 
 fetchAppointments = () => {
-  const SERVER_URL = `http://localhost:3001/appointments`;
+  // const SERVER_URL = `http://localhost:3001/appointments`;
+  const SERVER_URL = `https://glam-b.herokuapp.com/appointments`;
   axios.get(SERVER_URL, {withCredentials: true}).then((results) => {
     console.log(results.data.new_app);
     this.setState({

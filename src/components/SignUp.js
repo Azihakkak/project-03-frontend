@@ -33,7 +33,9 @@ handleSubmit = (event) => {
       password_confirmation: password_confirmation
     }
 
-axios.post('http://localhost:3001/users', {user}, {withCredentials: true})
+    // const SERVER_URL = 'http://localhost:3001/users/users';
+    const SERVER_URL = 'https://glam-b.herokuapp.com/users';
+axios.post(SERVER_URL, {user}, {withCredentials: true})
     .then(response => {
       if (response.data.status === 'created') {
         this.props.handleLogin(response.data)
