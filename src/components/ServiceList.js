@@ -30,19 +30,23 @@ fetchServices = () => {
   })
 }
 
+handleClick = (service_id) => {
+  this.props.history.push(`login/${service_id}`)
+}
+
   render() {
     return (
 
       <div className="py-5">
         <div className="container">
           <Title name="our" title="services"/>
-          <hr />
+          <hr id="welcome"/>
           <div className="row text-center padding">
           {
             this.state.services.map(service => {
               return (
                 <div className="col-xs-12 col-sm-6 col-md-4 my-5">
-                <Service key={service.id} service={service} />
+                <Service key={service.id} handleClick={this.handleClick} service={service} />
                 </div>
               )
             })

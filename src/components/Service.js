@@ -8,6 +8,16 @@ import {
 } from 'react-bootstrap';
 
 export default class Service extends Component {
+  constructor(props) {
+    super(props);
+this.handleClick = this.handleClick.bind(this);
+  }
+
+handleClick = (props) => {
+
+  this.props.handleClick(this.props.service.id)
+
+}
 
 
 
@@ -15,14 +25,20 @@ export default class Service extends Component {
     return(
         <CardDeck>
           <Card>
+
               <Card.Body className='align-items-center shadow explore-card'>
+              <Card.Img variant="top" src="images/nice-pic.jpg"/>
               <Card.Title>{this.props.service.title}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">${this.props.service.cost}</Card.Subtitle>
               <Card.Text>{this.props.service.description}</Card.Text>
-              <Link to={`/details/${this.props.service.id}`}>
-                <Button variant="btn btn-outline-secondary">BOOK</Button>
-                </Link>
+              <Card.Footer>
+
+                  <Button variant="btn btn-light" onClick={this.handleClick}>BOOK</Button>
+
+              </Card.Footer>
+
               </Card.Body>
+
           </Card>
         </CardDeck>
 

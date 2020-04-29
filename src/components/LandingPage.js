@@ -8,7 +8,7 @@ export default () => {
       <div className="row padding">
         <div className="col" >
           <img src="images/landing-img.jpg" className="img-fluid main-img" />
-            <div class="carousel-caption">
+            <div className="carousel-caption">
               <h1>WE BRING BEAUTY TO YOU</h1>
               <h3>In-home makeup services</h3>
               <h3>Anytime Anywhere</h3>
@@ -74,7 +74,7 @@ export default () => {
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-xs-12 col-sm-6 col-md-6">
-          <Link to="/services" style={{'text-decoration': 'none', 'color': 'white'}}>
+          <Link to="/services" style={{'textDecoration': 'none', 'color': 'white'}}>
             <div className="card" id="lp-card">
               <div className="card-body" >
                 <h4 className="card-title">MAKEUP</h4>

@@ -51,7 +51,11 @@ export default class LogIn extends Component {
 
 
   redirect = () => {
-    this.props.history.push('/services')
+    if (this.props.match.params.serviceId) {
+      (this.props.history.push(`/details/${this.props.match.params.serviceId}`))
+    } else {
+      this.props.history.push('/services')
+    }
   }
 
   handleErrors = () => {

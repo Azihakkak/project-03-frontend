@@ -25,9 +25,9 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <Navbar bg="light" expand="lg" classNmae="sticky-top">
+      <Navbar bg="light" expand="lg" className="sticky-top">
       <Container>
-        
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
@@ -39,16 +39,28 @@ export default class Navigation extends Component {
             ? (
               <>
                 <NavDropdown title={
-                    <span className="dropdown-style">Azi</span>
-                } id="basic-nav-dropdown" >
+                    <span className="dropdown-style">{this.props.user.name}</span>
+                } id="basic-nav-dropdown"  >
 
                 <NavDropdown.Item>
                   <Nav.Link as={Link} to="/card">
                     My Card
                   </Nav.Link>
                 </NavDropdown.Item>
+                {this.props.user.admin
+                ? (
+                    <NavDropdown.Item>
+                      <Nav.Link as={Link} to={`/bookings`}>
+                        BOOKINGS
+                      </Nav.Link>
+                    </NavDropdown.Item>
+                  )
+                : (
+                  console.log('admin false')
+                )
+              }
 
-                <NavDropdown.Divider />
+
                 <NavDropdown.Item>
                   <Nav.Link as={Link} to="/logout" onClick={this.handleClick}>
                     Log Out
