@@ -12,10 +12,12 @@ export default () => {
               <h1>WE BRING BEAUTY TO YOU</h1>
               <h3>In-home makeup services</h3>
               <h3>Anytime Anywhere</h3>
-              <button type="button"
-              className="btn btn-outline-light btn-lg">
-              BOOK SOME SELF CARE
-              </button>
+              <Link to="/services">
+                <button type="button"
+                className="btn btn-outline-light btn-lg">
+                BOOK SOME SELF CARE
+                </button>
+              </Link>
             </div>
         </div>
       </div>
@@ -45,18 +47,21 @@ export default () => {
       <div className="row text-center padding">
 
         <div className="col-xs-12 col-sm-6 col-md-4">
-          <i className="fas fa-coffee"></i>
-          <p>we come to you</p>
+        <i className="fa fa-car" aria-hidden="true"></i>
+          <p className="lead">We come to you</p>
+          <p>Whether in your home or hotel, sit back and relax as we bring the best service straight to your door.</p>
         </div>
 
         <div className="col-xs-12 col-sm-6 col-md-4">
-          <i className="fas fa-bold"></i>
-          <p>we come to you</p>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <p className="lead">Work only with experts</p>
+          <p>Every Makeup Artist is put through testing before being accepted into our network.</p>
         </div>
 
         <div className="col-sm-12 col-md-4">
-          <i className="fab fa-css3"></i>
-          <p>we come to you</p>
+          <i className="fa fa-calendar" aria-hidden="true"></i>
+          <p className="lead">Select your date and time</p>
+          <p>Every Makeup Artist is put through testing before being accepted into our network.</p>
         </div>
       </div>
       <hr className="my-4"/>

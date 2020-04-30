@@ -53,11 +53,11 @@ fetchAppointments = () => {
   render() {
     return(
       <div>
-        <h3>Welcome {this.props.user.name}</h3>
-
-        <Table striped bordered hover variant="dark" responsive="sm">
+        <h1 className="card-title">Welcome {this.props.user.name}</h1>
+        <hr id="welcome" />
+        <Table striped bordered hover variant="dark" responsive className="table">
           <thead>
-            <tr>
+            <tr style={{'text-align': 'center'}}>
               <th>Client Name</th>
               <th>Client Email</th>
               <th>Service</th>

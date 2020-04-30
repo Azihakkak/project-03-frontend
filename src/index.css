@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Limelight&display=swap');
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -28,6 +28,12 @@ html, body {
   padding: 0.8rem;
 }
 
+.logo {
+  font-family: 'Limelight', cursive;
+  font-size: 2em!important;
+  letter-spacing: 0.3em;
+}
+
 .navbar-nav li {
   padding-right: 20px;
 }
@@ -41,8 +47,11 @@ html, body {
   height: 100%;
 }
 
+
+
 .carousel-caption h1 {
   text-shadow: 1px 1px 10px #000;
+  font-size: 2.5em;
 }
 
 .carousel-caption h3 {
@@ -82,6 +91,9 @@ html, body {
   border-radius: 0.5rem;
   margin-bottom: 3rem;
 }
+#lp-card:hover {
+  text-shadow: 1px 1px 10px #000;
+}
 
 .social a {
   font-size: 2em;
@@ -104,6 +116,32 @@ html, body {
 .fa-twitter:hover,
 .fa-instagram:hover {
   color: #d5d5d5;
+}
+
+.fa-car {
+  color: blue;
+}
+
+.fa-star {
+  color: blue;
+}
+
+.fa-calendar {
+  color: blue;
+}
+
+.fa-car, .fa-star, .fa-calendar {
+  font-size: 4em;
+  margin: 1rem;
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em!important;
+}
+.table {
+  margin-top: 4em;
 }
 
 #connect {

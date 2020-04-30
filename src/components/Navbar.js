@@ -31,7 +31,7 @@ export default class Navigation extends Component {
     return (
       <Navbar bg="light" expand="lg" className="sticky-top">
       <Container>
-
+        <Navbar.Brand href="/" className="logo">GlamB</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">

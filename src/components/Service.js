@@ -25,7 +25,7 @@ handleClick = (props) => {
           <Card>
 
               <Card.Body className='align-items-center shadow explore-card'>
-              <Card.Img variant="top" src="images/nice-pic.jpg"/>
+              <Card.Img className="img-s" variant="top" src="images/nice-pic.jpg"/>
               <Card.Title>{this.props.service.title}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">${this.props.service.cost}</Card.Subtitle>
               <Card.Text>{this.props.service.description}</Card.Text>

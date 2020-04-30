@@ -50,9 +50,9 @@ renderTableData = () => {
   render() {
     return(
       <div>
-        <h3>Welcome {this.props.user.name}</h3>
-
-        <Table striped bordered hover variant="dark">
+        <h1 className="card-title">Welcome {this.props.user.name}</h1>
+        <hr id="welcome" />
+        <Table striped bordered hover variant="dark" className="table">
           <thead>
             <tr style={{'text-align': 'center'}}>
               <th>Service</th>
