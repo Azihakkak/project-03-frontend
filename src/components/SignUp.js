@@ -51,7 +51,12 @@ handleSubmit = (event) => {
 
 
 redirect = () => {
+  if (this.props.match.params.serviceId) {
+    (this.props.history.push(`/details/${this.props.match.params.serviceId}`))
+  } else {
     this.props.history.push('/services')
+  }
+
   }
 
 
@@ -96,9 +101,9 @@ return (
             <label for="exampleInputpass1" className="mt-3">Confirm Password</label>
             <input name="password_confirmation" type="password" className="form-control" id="exampleInputPassword1" placeholder="password confirmation" value={ password_confirmation } onChange={ this.handleChange } required />
           </div>
-            <Link to='/Services'>
+
             <input type="submit" value="SIGN UP" className="btn btn-primary btn-lg mb-3 mt-3" id="button"/>
-            </Link>
+
           <div>
             Already have an account? <Link to='/login'>LOG IN</Link>
           </div>

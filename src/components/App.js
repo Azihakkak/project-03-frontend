@@ -67,7 +67,7 @@ handleLogout = () => {
             <Route exact path='/details/:serviceId' render={props => (<Details {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn} user={this.state.user} />)} />
             <Route path='/card' render={props => (<Card {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn} user={this.state.user} />)} />
             <Route path='/bookings' render={props => (<BookingList {...props} handleLogout={this.handleLogout} loggedInStatus={this.state.isLoggedIn} user={this.state.user} />)} />
-            <Route path='/signup' render={props => (<SignUp {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn} />)} />
+            <Route path='/signup/:serviceId?' render={props => (<SignUp {...props} handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn} />)} />
             <Route exact path="/login/:serviceId?" render={props => (<LogIn {...props}  handleLogin={this.handleLogin} loggedInStatus={this.state.isLoggedIn} />)} />
           </Switch>
 

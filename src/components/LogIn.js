@@ -73,6 +73,7 @@ export default class LogIn extends Component {
   };
 
 
+
   render() {
     const {name, email, password} = this.state;
     return(
@@ -93,7 +94,7 @@ export default class LogIn extends Component {
               <input type="submit" value="LOG IN" className="btn btn-primary btn-lg mb-3 mt-3" id="button"/>
 
             <div>
-              Don't have an account? <Link to='/signup'>SIGN UP</Link>
+              Don't have an account? <Link to={this.props.match.params.serviceId ? `/signup/${this.props.match.params.serviceId}` : '/signup'}>SIGN UP</Link>
             </div>
 
           </form>

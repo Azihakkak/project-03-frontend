@@ -83,11 +83,6 @@ handleClick = () => {
 
 }
 
-// toggleModal = () => {
-//   this.setState({
-//     visible: this.state.visible
-//   })
-// }
 
 handleClose = () => {
   this.setState({visible: false});

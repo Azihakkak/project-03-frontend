@@ -14,9 +14,7 @@ this.handleClick = this.handleClick.bind(this);
   }
 
 handleClick = (props) => {
-
   this.props.handleClick(this.props.service.id)
-
 }
 
 
