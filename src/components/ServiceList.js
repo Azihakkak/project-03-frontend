@@ -46,7 +46,7 @@ handleClick = (service_id) => {
           {
             this.state.services.map(service => {
               return (
-                <div className="col-xs-12 col-sm-6 col-md-4 my-5">
+                <div className="col-xs-12 col-sm-6 col-md-4 my-5 all-cards">
                 <Service key={service.id} handleClick={this.handleClick} service={service} />
                 </div>
               )

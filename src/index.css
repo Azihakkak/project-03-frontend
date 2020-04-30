@@ -143,6 +143,9 @@ html, body {
 .table {
   margin-top: 4em;
 }
+p.card-text {
+  min-height: 72px;
+}
 
 #connect {
   padding-top: 3rem;
