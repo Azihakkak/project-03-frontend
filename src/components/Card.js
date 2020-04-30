@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Table} from 'react-bootstrap';
+import moment from 'moment';
+
 
 export default class Card extends Component {
   constructor() {
@@ -38,7 +40,7 @@ renderTableData = () => {
     return (
             <tr key={id}>
               <td>{service.service.title}</td>
-               <td>{appointment_date}</td>
+               <td>{moment(appointment_date).format('MMMM Do YYYY, h:mm:ss a') }</td>
                <td>{location}</td>
             </tr>
          );
@@ -50,9 +52,9 @@ renderTableData = () => {
       <div>
         <h3>Welcome {this.props.user.name}</h3>
 
-        <Table striped bordered hover>
+        <Table striped bordered hover variant="dark">
           <thead>
-            <tr>
+            <tr style={{'text-align': 'center'}}>
               <th>Service</th>
               <th>Date & Time</th>
               <th>Location</th>

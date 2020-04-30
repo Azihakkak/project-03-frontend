@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Table} from 'react-bootstrap';
+import moment from 'moment';
 
 
 export default class BookingList extends Component {
@@ -38,7 +39,7 @@ fetchAppointments = () => {
                 <td>{appointment.user.name}</td>
                  <td>{appointment.user.email}</td>
                  <td>{appointment.service.title}</td>
-                 <td>{appointment_date}</td>
+                 <td>{ moment(appointment_date).format('MMMM Do YYYY, h:mm:ss a')}</td>
                  <td>{location}</td>
 
               </tr>
@@ -54,7 +55,7 @@ fetchAppointments = () => {
       <div>
         <h3>Welcome {this.props.user.name}</h3>
 
-        <Table striped bordered hover>
+        <Table striped bordered hover variant="dark" responsive="sm">
           <thead>
             <tr>
               <th>Client Name</th>

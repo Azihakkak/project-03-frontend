@@ -119,7 +119,7 @@ redirect = () => {
                        PICK YOUR PREFERRED DATE & TIME
                        </mobiscroll.FormGroupTitle>
 
-                       <mobiscroll.Datetime steps={{minute: 15}} dateWheels="|D M d|" alue={this.state.appointment_date} onSet={this.onSetMoment}
+                       <mobiscroll.Datetime steps={{minute: 15}} dateWheels="|D M d|" value={this.state.appointment_date} onSet={this.onSetMoment}
                        theme= 'ios'
                        themeVariant= 'light'>
                           <mobiscroll.Input placeholder="Please Select..."></mobiscroll.Input>
