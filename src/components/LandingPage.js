@@ -76,9 +76,9 @@ export default () => {
           <Link to="/services" style={{'textDecoration': 'none', 'color': 'white'}}>
             <div className="card" id="lp-card">
               <div className="card-body" >
-                <h4 className="card-title">MAKEUP</h4>
-                <p className="card-text">Natural, sexy or dramatic-we'll achieve your perfect look.</p>
-                <p className="card-text">Starting at $90</p>
+                <h4 className="card-title-lp">MAKEUP</h4>
+                <p className="card-text-lp">Natural, sexy or dramatic-we'll achieve your perfect look.</p>
+                <p className="card-text-lp">Starting at $90</p>
               </div>
             </div>
             </Link>

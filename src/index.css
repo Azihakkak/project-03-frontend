@@ -83,7 +83,7 @@ html, body {
   margin-bottom: 3rem;
 }
 #lp-card:hover {
-  text-shadow: 1px 1px 10px #000;
+  text-shadow: 1px 1px 5px #222;
 }
 
 .social a {
@@ -131,7 +131,14 @@ html, body {
   color: #222;
   margin-top: 1em;
   margin-bottom: 1em!important;
+}
 
+.card-title-lp {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em!important;
 }
 
 .card-title-main {
@@ -153,6 +160,10 @@ html, body {
 p.card-text {
   min-height: 72px;
 
+}
+.card-text-lp {
+  min-height: 72px;
+  font-size: 1.5em;
 }
 
 #basic-nav-dropdown {
