@@ -41,10 +41,7 @@ fetchAppointments = () => {
                  <td>{appointment.service.title}</td>
                  <td>{ moment(appointment_date).format('MMMM Do YYYY, h:mm:ss a')}</td>
                  <td>{location}</td>
-
               </tr>
-
-
            );
     })
   }
@@ -53,7 +50,7 @@ fetchAppointments = () => {
   render() {
     return(
       <div>
-        <h1 className="card-title">Welcome {this.props.user.name}</h1>
+        <h1 className="card-title-main">Welcome {this.props.user.name}</h1>
         <hr id="welcome" />
         <Table striped bordered hover variant="dark" responsive className="table">
           <thead>

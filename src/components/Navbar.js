@@ -43,20 +43,21 @@ export default class Navigation extends Component {
             ? (
               <>
                 <NavDropdown title={
-                    <span className="dropdown-style">{this.props.user.name}</span>
+                    <span className="dropdown-style ">{this.props.user.name}</span>
                 } id="basic-nav-dropdown"  >
-
-                <NavDropdown.Item>
-                  <Nav.Link as={Link} to="/card">
-                    My Card
+                <NavDropdown.Item className="user-nav">
+                  <Nav.Link as={Link} to="/card" className="user-nav">
+                    My appointments
                   </Nav.Link>
                 </NavDropdown.Item>
+
                 {this.props.user.admin
                 ? (
-                    <NavDropdown.Item>
-                      <Nav.Link as={Link} to={`/bookings`}>
-                        BOOKINGS
+                    <NavDropdown.Item className="user-nav ">
+                      <Nav.Link as={Link} to={`/bookings`} className="user-nav">
+                        All bookings
                       </Nav.Link>
+
                     </NavDropdown.Item>
                   )
                 : (
@@ -64,9 +65,9 @@ export default class Navigation extends Component {
                 )
               }
 
-
+                <div class="dropdown-divider"></div>
                 <NavDropdown.Item>
-                  <Nav.Link as={Link} to="/logout" onClick={this.handleClick}>
+                  <Nav.Link as={Link} to="/logout" onClick={this.handleClick} className="user-nav" >
                     Log Out
                   </Nav.Link>
                 </NavDropdown.Item>

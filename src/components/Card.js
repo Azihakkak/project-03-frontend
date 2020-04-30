@@ -50,7 +50,7 @@ renderTableData = () => {
   render() {
     return(
       <div>
-        <h1 className="card-title">Welcome {this.props.user.name}</h1>
+        <h1 className="card-title-main">Welcome {this.props.user.name}</h1>
         <hr id="welcome" />
         <Table striped bordered hover variant="dark" className="table">
           <thead>

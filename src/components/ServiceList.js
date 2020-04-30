@@ -40,7 +40,7 @@ handleClick = (service_id) => {
 
       <div className="py-5">
         <div className="container">
-          <Title name="our" title="services"/>
+          <Title name="our" title="services" className="hero-title"/>
           <hr id="welcome"/>
           <div className="row text-center padding">
           {

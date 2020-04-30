@@ -23,13 +23,7 @@ export default () => {
       </div>
     </div>
 
-    <div className="container-fluid">
-      <div className="row jumbotron">
-        <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-          <p className="lead">GlamB offers in-home makeup services by the top professional Makeup Artists.</p>
-        </div>
-      </div>
-    </div>
+
 
     <div className="container-fluid padding">
       <div className="row welcome text-center">
@@ -38,7 +32,7 @@ export default () => {
           </div>
         <hr id="welcome"/>
           <div className="col-12">
-            <p className="lead">We provide you the best experience that you could ever imagine, and make you feel amazing for your day.</p>
+            <p className="lead">Beauty begins the moment you decide to be yourself.</p>
           </div>
       </div>
     </div>

@@ -31,7 +31,7 @@ handleClick = (props) => {
               <Card.Text>{this.props.service.description}</Card.Text>
               <Card.Footer>
 
-                  <Button variant="btn btn-light" onClick={this.handleClick}>BOOK</Button>
+                  <Button variant="btn btn-outline-info btn-md" onClick={this.handleClick}>BOOK</Button>
 
               </Card.Footer>
 

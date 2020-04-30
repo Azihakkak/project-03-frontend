@@ -135,13 +135,13 @@ redirect = () => {
               </Form>
 
               <Link to='/services'>
-                <Button variant="btn btn-outline-secondary" className="mb-3 mt-3">
+                <Button variant="btn btn-outline-info btn-md" className="mb-3 mt-3">
                   Keep Browsing
                 </Button>
               </Link>
               <p>Just be aware that this is not an instant booking system, you will be contacted shortly for confirmation.</p>
               <Card.Footer className="text-muted">
-                  <Button variant="btn btn-light " onClick={this.handleClick}  >
+                  <Button variant="btn btn-outline-info btn-md " onClick={this.handleClick}  >
                     REQUEST A BOOKING
                   </Button>
               </Card.Footer>
@@ -156,7 +156,7 @@ redirect = () => {
           <Modal.Title>Thank you {this.props.user.name}</Modal.Title>
 
           </Modal.Header>
-          <Modal.Body>Thank you for submitting a request, you will be contacted shortly through email.</Modal.Body>
+          <Modal.Body>Thank you for submitting a booking request, you will be contacted shortly through email.</Modal.Body>
           <Modal.Footer>
           <Button variant="secondary" onClick={this.handleClose}>
             Close

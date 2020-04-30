@@ -17,7 +17,6 @@ code {
 
 
 html, body {
-
   height: 100%;
   width: 100%;
   font-family: 'Raleway', sans-serif;
@@ -47,8 +46,6 @@ html, body {
   height: 100%;
 }
 
-
-
 .carousel-caption h1 {
   text-shadow: 1px 1px 10px #000;
   font-size: 2em;
@@ -69,12 +66,6 @@ html, body {
   border: 1px solid #5c67b7;
 }
 
-.jumbotron {
-  padding: 1rem!important;
-  border-radius: 0;
-  text-align: center;
-}
-
 .padding {
   padding-bottom: 2rem;
 }
@@ -87,7 +78,7 @@ html, body {
 }
 
 #lp-card {
-  background: #d4b06f;
+  background: #e6c1c1;
   border-radius: 0.5rem;
   margin-bottom: 3rem;
 }
@@ -119,15 +110,15 @@ html, body {
 }
 
 .fa-car {
-  color: blue;
+  color: #22a280;
 }
 
 .fa-star {
-  color: blue;
+  color: #22a280;
 }
 
 .fa-calendar {
-  color: blue;
+  color: #22a280;
 }
 
 .fa-car, .fa-star, .fa-calendar {
@@ -137,19 +128,58 @@ html, body {
 
 .card-title {
   text-align: center;
+  color: #222;
   margin-top: 1em;
   margin-bottom: 1em!important;
+
 }
+
+.card-title-main {
+  text-align: center;
+  color: #222;
+  margin-top: 1em;
+  margin-bottom: 1em!important;
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
+}
+.hero-title {
+  letter-spacing: 0.2em;
+  word-spacing: 0.5em;
+}
+
 .table {
   margin-top: 4em;
 }
 p.card-text {
   min-height: 72px;
+
+}
+
+#basic-nav-dropdown {
+  color: rgba(0,0,0,.5);
+}
+
+#basic-nav-dropdown:hover {
+  color: #222;
 }
 
 #connect {
   padding-top: 3rem;
   padding-bottom: 0;
+}
+
+.user-nav {
+  color: rgba(0,0,0,.5);
+}
+
+.user-nav:hover {
+  color: #222;
+}
+
+.spacing {
+  letter-spacing: 0.2em;
+  word-spacing: 0.2em;
+  font-weight: 800;
 }
 
 [class*="col-"] {
