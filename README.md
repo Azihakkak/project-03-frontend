@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project 03
+=================================
 
-## Available Scripts
+This app will help people to request beauty services such as makeup just by providing the time, date and location and wait to be contacted by the admin.
 
-In the project directory, you can run:
+Live Demo Link
+---------------------------------
+https://priceless-wilson-b264e7.netlify.app
 
-### `npm start`
+Project Description
+---------------------------------
+As a user you can browse all the services and then pick one and when you try to book it takes you to login page to login or signup to be able to make a request. then they see the details of that service and they can pick their date and time and location and send a request to admin. Then admin can see all the bookings that has been made and organise the appointment and follow up with clients through email.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Technology Used
+----------------------------------
+- Ruby on Rails
+- React.js
+- Css
+- Bootstrap
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Features so far
+----------------------------------
+- Sign up
+- Sign in
+- Browse services
+- Service details
+- Request booking
+- Users can check their bookings
+- Admin can check all bookings
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+To Do
+----------------------------------
+- Add a section to all booking tables for the admin to leave comments
+- Users can delete their request if they had a change of mind
+- Add artists so the admin can assign clients to a specific artist
+- Admin can create more services and delete some or update the prices.
