@@ -17,23 +17,20 @@ componentDidMount() {
   this.fetchAppointments()
 }
 
+// Fetching data for all appointments
 fetchAppointments = () => {
   // const SERVER_URL = `http://localhost:3001/appointments`;
   const SERVER_URL = `https://glam-b.herokuapp.com/appointments`;
   axios.get(SERVER_URL, {withCredentials: true}).then((results) => {
-    console.log(results.data.new_app);
     this.setState({
       appointments: results.data.new_app
     })
-    });
-  }
+  });
+}
 
   renderTableData = () => {
-
     return this.state.appointments.map((appointment) => {
-
       const {id, location, appointment_date} = appointment;
-
       return (
               <tr key={id}>
                 <td>{appointment.user.name}</td>
@@ -42,7 +39,7 @@ fetchAppointments = () => {
                  <td>{ moment(appointment_date).format('MMMM Do YYYY, h:mm:ss a')}</td>
                  <td>{location}</td>
               </tr>
-           );
+      );
     })
   }
 
@@ -63,7 +60,7 @@ fetchAppointments = () => {
             </tr>
           </thead>
           <tbody>
-          {this.renderTableData()}
+            {this.renderTableData()}
           </tbody>
         </Table>
       </div>

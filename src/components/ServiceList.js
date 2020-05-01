@@ -37,7 +37,6 @@ handleClick = (service_id) => {
 
   render() {
     return (
-
       <div className="py-5">
         <div className="container">
           <Title name="our" title="services" className="hero-title"/>
@@ -55,7 +54,6 @@ handleClick = (service_id) => {
           </div>
         </div>
      </div>
-
     );
   }
 }

@@ -44,7 +44,7 @@ export default class Navigation extends Component {
               <>
                 <NavDropdown title={
                     <span className="dropdown-style ">{this.props.user.name}</span>
-                } id="basic-nav-dropdown"  >
+                } id="basic-nav-dropdown" >
                 <NavDropdown.Item className="user-nav">
                   <Nav.Link as={Link} to="/card" className="user-nav">
                     My appointments
@@ -57,7 +57,6 @@ export default class Navigation extends Component {
                       <Nav.Link as={Link} to={`/bookings`} className="user-nav">
                         All bookings
                       </Nav.Link>
-
                     </NavDropdown.Item>
                   )
                 : (
@@ -71,7 +70,7 @@ export default class Navigation extends Component {
                     Log Out
                   </Nav.Link>
                 </NavDropdown.Item>
-                </NavDropdown>
+              </NavDropdown>
             </>
             ) : (
               <>
@@ -83,7 +82,7 @@ export default class Navigation extends Component {
           }
 
         </Navbar.Collapse>
-        </Container>
+      </Container>
       </Navbar>
     );
 

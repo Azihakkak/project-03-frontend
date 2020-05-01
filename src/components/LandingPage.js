@@ -23,8 +23,6 @@ export default () => {
       </div>
     </div>
 
-
-
     <div className="container-fluid padding">
       <div className="row welcome text-center">
           <div className="col-12">
@@ -55,7 +53,7 @@ export default () => {
         <div className="col-sm-12 col-md-4">
           <i className="fa fa-calendar" aria-hidden="true"></i>
           <p className="lead">Select your date and time</p>
-          <p>Every Makeup Artist is put through testing before being accepted into our network.</p>
+          <p>We give you the convinience of picking your own date and time so we can arrange a MUA for you.</p>
         </div>
       </div>
       <hr className="my-4"/>
