@@ -108,7 +108,7 @@ redirect = () => {
                 <Card.Text>
                   {this.state.service.description}
                 </Card.Text>
-                // form for date and time
+              
                 <mobiscroll.Form>
                    <mobiscroll.FormGroup>
                        <mobiscroll.FormGroupTitle>
