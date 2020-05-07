@@ -5,7 +5,11 @@ This app will help people to request beauty services such as makeup just by prov
 
 Live Demo Link
 ---------------------------------
+front-end link:
 https://priceless-wilson-b264e7.netlify.app
+
+back-end link:
+https://glam-b.herokuapp.com/
 
 Project Description
 ---------------------------------

@@ -108,7 +108,7 @@ redirect = () => {
                 <Card.Text>
                   {this.state.service.description}
                 </Card.Text>
-              
+
                 <mobiscroll.Form>
                    <mobiscroll.FormGroup>
                        <mobiscroll.FormGroupTitle>
@@ -132,13 +132,7 @@ redirect = () => {
                     onChange={this.handleChange} required/>
                  </Form.Group>
               </Form>
-
-              <Link to='/services'>
-                <Button variant="btn btn-outline-info btn-md" className="mb-3 mt-3">
-                  Keep Browsing
-                </Button>
-              </Link>
-
+              
                 <p>Just be aware that this is not an instant booking system, you will be contacted shortly for confirmation.
                 </p>
 
