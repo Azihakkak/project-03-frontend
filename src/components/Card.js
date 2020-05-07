@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Table} from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import moment from 'moment';
+import { SERVER_URL } from './constants';
 
 
 export default class Card extends Component {
@@ -20,9 +21,7 @@ componentDidMount() {
 }
 // Fetch appointments of the user
 fetchAppointments = () => {
-  // const SERVER_URL = `http://localhost:3001/appointments/user/${this.props.user.id}`;
-  const SERVER_URL = `https://glam-b.herokuapp.com/appointments/user/${this.props.user.id}`;
-  axios.get(SERVER_URL, {withCredentials: true}).then((results) => {
+  axios.get(`${SERVER_URL}/appointments/user/${this.props.user.id}`, {withCredentials: true}).then((results) => {
     this.setState({
       services: results.data.new_user_app
     });

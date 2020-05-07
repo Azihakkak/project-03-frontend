@@ -1,8 +1,7 @@
-import mobiscroll from '@mobiscroll/react';
-import '@mobiscroll/react/dist/css/mobiscroll.min.css';
+import DateTimePicker from 'react-datetime-picker';
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { SERVER_URL } from './constants';
 
 import {
   Card,
@@ -11,10 +10,7 @@ import {
   Row,
   Col,
   Form,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModelFooter
+  Modal
 } from 'react-bootstrap';
 
 export default class Details extends Component {
@@ -25,7 +21,7 @@ export default class Details extends Component {
       inCard: false,
       service: {},
       userId: this.props.user.id,
-      appointment_date: {},
+      appointment_date: new Date(),
       location: '',
       visible: false
     }
@@ -36,9 +32,7 @@ componentDidMount() {
   }
 // get the details of the service
 fetchService = () => {
-  // const SERVER_URL = `http://localhost:3001/services/${this.state.serviceId}`;
-  const SERVER_URL = `https://glam-b.herokuapp.com/services/${this.state.serviceId}`;
-  axios.get(SERVER_URL, {withCredentials: true}).then(result => {
+  axios.get(`${SERVER_URL}/services/${this.state.serviceId}`, {withCredentials: true}).then(result => {
     this.setState({service: result.data.service});
   })
 }
@@ -72,9 +66,8 @@ handleClick = () => {
     service_id: serviceId
   };
 
-  // const SERVER_URL = 'http://localhost:3001/appointments';
-  const SERVER_URL = 'https://glam-b.herokuapp.com/appointments';
-  axios.post(SERVER_URL, { appointment }, {withCredentials: true}).then((result) => {
+
+  axios.post(`${SERVER_URL}/appointments`, { appointment }, {withCredentials: true}).then((result) => {
     this.handleShow()
   })
 }
@@ -93,6 +86,9 @@ redirect = () => {
   this.props.history.push(`/services`);
 }
 
+onChange = appointment_date => this.setState({ appointment_date })
+
+
   render() {
     return(
       <Container className="mt-5">
@@ -109,21 +105,17 @@ redirect = () => {
                   {this.state.service.description}
                 </Card.Text>
 
-                <mobiscroll.Form>
-                   <mobiscroll.FormGroup>
-                       <mobiscroll.FormGroupTitle>
-                       PICK YOUR PREFERRED DATE & TIME
-                       </mobiscroll.FormGroupTitle>
-
-                       <mobiscroll.Datetime
-                         steps={{minute: 15}}
-                         dateWheels="|D M d|" value={this.state.appointment_date} onSet={this.onSetMoment}
-                         theme= 'ios'
-                         themeVariant= 'light'>
-                         <mobiscroll.Input placeholder="Please Select..."></mobiscroll.Input>
-                       </mobiscroll.Datetime>
-                  </mobiscroll.FormGroup>
-               </mobiscroll.Form>
+               <Form style={{'margin-bottom': '1.5rem'}}>
+               <div>
+                  <Form.Label>DATE & TIME</Form.Label>
+                </div>
+                  <DateTimePicker
+                  calendarIcon={null}
+                  name="appointment_date"
+                  onChange={this.onChange}
+                  value={this.state.appointment_date}
+                  />
+               </Form>
 
               <Form>
                 <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -132,7 +124,7 @@ redirect = () => {
                     onChange={this.handleChange} required/>
                  </Form.Group>
               </Form>
-              
+
                 <p>Just be aware that this is not an instant booking system, you will be contacted shortly for confirmation.
                 </p>
 

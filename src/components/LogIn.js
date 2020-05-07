@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { SERVER_URL } from './constants';
 
 
 export default class LogIn extends Component {
@@ -14,7 +15,7 @@ export default class LogIn extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
   return this.props.loggedInStatus ? this.redirect() : null
 }
 
@@ -33,9 +34,7 @@ export default class LogIn extends Component {
         password: password
   }
 
-  // const SERVER_URL = 'http://localhost:3001/login';
-  const SERVER_URL = 'https://glam-b.herokuapp.com/login';
-  axios.post(SERVER_URL, {user}, {withCredentials: true})
+  axios.post(`${SERVER_URL}/login`, {user}, {withCredentials: true})
       .then(response => {
         if (response.data.logged_in) {
           this.props.handleLogin(response.data)
@@ -74,8 +73,7 @@ export default class LogIn extends Component {
 
 
 
-  render() {
-    const {name, email, password} = this.state;
+  render() {  
     return(
       <div>
         <h1 className="mt-4">Log In</h1>

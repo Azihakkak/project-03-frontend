@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Table} from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import moment from 'moment';
+import { SERVER_URL } from './constants';
 
 
 export default class BookingList extends Component {
@@ -19,9 +20,7 @@ componentDidMount() {
 
 // Fetching data for all appointments
 fetchAppointments = () => {
-  // const SERVER_URL = `http://localhost:3001/appointments`;
-  const SERVER_URL = `https://glam-b.herokuapp.com/appointments`;
-  axios.get(SERVER_URL, {withCredentials: true}).then((results) => {
+  axios.get(`${SERVER_URL}/appointments`, {withCredentials: true}).then((results) => {
     this.setState({
       appointments: results.data.new_app
     })

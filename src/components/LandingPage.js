@@ -7,7 +7,7 @@ export default () => {
     <div className="container-fluid padding">
       <div className="row padding">
         <div className="col" >
-          <img src="images/landing-img.jpg" className="img-fluid main-img" />
+          <img src="images/landing-img.jpg" className="img-fluid main-img" alt="retro" />
             <div className="carousel-caption">
               <h1>WE BRING BEAUTY TO YOU</h1>
               <h3>In-home makeup services</h3>
@@ -91,9 +91,9 @@ export default () => {
           <h2>Connect</h2>
         </div>
         <div className="col-12 social padding">
-          <a href="#"><i className="fab fa-facebook" /></a>
-          <a href="#"><i className="fab fa-twitter" /></a>
-          <a href="#"><i className="fab fa-instagram" /></a>
+          <i className="fab fa-facebook" />
+          <i className="fab fa-twitter" />
+          <i className="fab fa-instagram" />
         </div>
       </div>
     </div>

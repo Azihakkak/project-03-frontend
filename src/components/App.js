@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import LandingPage from './LandingPage';
 import ServiceList from './ServiceList';
-import Service from './Service';
 import Details from './Details';
 import Card from './Card';
 import BookingList from './BookingList';
 import Navbar from './Navbar';
 import SignUp from './SignUp';
 import LogIn from './LogIn';
-import Permission from './Permission';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
+import { SERVER_URL } from './constants';
+
 
 
 class App extends Component {
@@ -29,9 +29,7 @@ class App extends Component {
 
 
   loginStatus = () => {
-    // const SERVER_URL = 'http://localhost:3001/logged_in';
-    const SERVER_URL = 'https://glam-b.herokuapp.com/logged_in';
-    axios.get(SERVER_URL, {withCredentials: true})
+    axios.get(`${SERVER_URL}/logged_in`, {withCredentials: true})
     .then(response => {
       if (response.data.logged_in) {
         this.handleLogin(response)
@@ -121,7 +119,7 @@ class App extends Component {
               render={props => (
                 <LogIn {...props}
                   handleLogin={this.handleLogin}
-                  loggedInStatus={this.state.isLoggedIn} 
+                  loggedInStatus={this.state.isLoggedIn}
                 />
               )}
             />

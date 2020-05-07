@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Service from './Service';
 import Title from './Title';
 import axios from 'axios';
+import { SERVER_URL } from './constants';
 
 export default class ServiceList extends Component {
   constructor() {
@@ -18,10 +19,8 @@ componentDidMount() {
 }
 
 fetchServices = () => {
-  // const SERVER_URL = 'http://localhost:3001/services';
-  const SERVER_URL = 'https://glam-b.herokuapp.com/services';
   this.setState({...this.state, isFetching: true})
-  axios.get(SERVER_URL, {withCredentials: true}).then(results => {
+  axios.get(`${SERVER_URL}/services`, {withCredentials: true}).then(results => {
     this.setState({
       services: results.data.services
     });

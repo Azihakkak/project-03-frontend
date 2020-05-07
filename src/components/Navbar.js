@@ -1,15 +1,14 @@
 import React ,{ Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { SERVER_URL } from './constants';
 import {
   Nav,
   Navbar,
   NavDropdown,
-  Form,
-  Button,
-  FormControl,
   Container
 } from 'react-bootstrap';
+
 
 
 
@@ -17,9 +16,7 @@ export default class Navigation extends Component {
 
 
   handleClick = () => {
-    // const SERVER_URL = 'http://localhost:3001/logout';
-    const SERVER_URL = 'https://glam-b.herokuapp.com/logout';
-      axios.delete(SERVER_URL, {withCredentials: true})
+      axios.delete(`${SERVER_URL}/logout`, {withCredentials: true})
       .then(response => {
         this.props.handleLogout()
         this.props.history.push('/')
@@ -59,9 +56,7 @@ export default class Navigation extends Component {
                       </Nav.Link>
                     </NavDropdown.Item>
                   )
-                : (
-                  console.log('admin false')
-                )
+                : null
               }
 
                 <div class="dropdown-divider"></div>
