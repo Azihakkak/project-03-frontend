@@ -48,7 +48,7 @@ renderTableData = () => {
         <hr id="welcome" />
         <Table striped bordered hover variant="dark" className="table">
           <thead>
-            <tr style={{'text-align': 'center'}}>
+            <tr style={{'textAlign': 'center'}}>
               <th>Service</th>
               <th>Date & Time</th>
               <th>Location</th>

@@ -80,23 +80,23 @@ render() {
           <h1 className="mt-4">Sign Up</h1>
 
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group" controlId="formBasicEmail" className="w-50">
-              <label for="exampleInputEmail1" className="mt-3">Name</label>
+            <div className="form-group" controlid="formBasicEmail" className="w-50">
+              <label className="mt-3">Name</label>
               <input name="name" type="text" className="form-control" id="exampleInputEmail1" placeholder="name" value={name} onChange={ this.handleChange } autoFocus required />
             </div>
 
             <div className="form-group" className="w-50">
-              <label for="exampleInputemail1" className="mt-3">Email</label>
+              <label className="mt-3">Email</label>
               <input name="email" type="text" className="form-control" id="exampleInputemail1" placeholder="email" value={ email } onChange={ this.handleChange } required />
             </div>
 
             <div className="form-group" className="w-50">
-              <label for="exampleInputpass1" className="mt-3">Password</label>
+              <label className="mt-3">Password</label>
               <input name="password" type="password" className="form-control" id="exampleInputPassword1" placeholder="password" value={ password } onChange={ this.handleChange } required />
             </div>
 
             <div className="form-group" className="w-50">
-              <label for="exampleInputpass1" className="mt-3">Confirm Password</label>
+              <label className="mt-3">Confirm Password</label>
               <input name="password_confirmation" type="password" className="form-control" id="exampleInputPassword1" placeholder="password confirmation" value={ password_confirmation } onChange={ this.handleChange } required />
             </div>
 

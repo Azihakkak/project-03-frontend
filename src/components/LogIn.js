@@ -73,19 +73,19 @@ export default class LogIn extends Component {
 
 
 
-  render() {  
+  render() {
     return(
       <div>
         <h1 className="mt-4">Log In</h1>
 
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group" controlId="formBasicEmail" className="w-50">
-              <label for="exampleInputEmail1" className="mt-3">Email address</label>
+            <div className="form-group" controlid="formBasicEmail" className="w-50">
+              <label className="mt-3">Email address</label>
               <input name="email" type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter email" value={ this.state.email } onChange={ this.handleChange } autoFocus required />
             </div>
 
             <div className="form-group" className="w-50">
-              <label for="exampleInputPassword1" className="mt-3">Password</label>
+              <label className="mt-3">Password</label>
               <input name="password" type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" value={ this.state.password } onChange={ this.handleChange } required />
             </div>
 

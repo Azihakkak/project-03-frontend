@@ -91,12 +91,12 @@ onChange = appointment_date => this.setState({ appointment_date })
 
   render() {
     return(
-      <Container className="mt-5">
+      <Container className="mt-2">
         <Row className="justify-content-center text-center">
           <Col className="col-xs-12 col-sm-12 col-md-8 col-lg-6">
-            <Card>
+            <Card >
               <Card.Body className='align-items-center shadow explore-card'>
-                <Card.Img variant="top" src="images/nice-pic.jpg"/>
+                <Card.Img variant="top" src="images/nice-pic.jpg" alt="details"/>
                 <Card.Title>{this.state.service.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   ${this.state.service.cost}
@@ -105,7 +105,7 @@ onChange = appointment_date => this.setState({ appointment_date })
                   {this.state.service.description}
                 </Card.Text>
 
-               <Form style={{'margin-bottom': '1.5rem'}}>
+               <Form style={{'marginBottom': '1.5rem'}}>
                <div>
                   <Form.Label>DATE & TIME</Form.Label>
                 </div>
@@ -120,7 +120,7 @@ onChange = appointment_date => this.setState({ appointment_date })
               <Form>
                 <Form.Group controlId="exampleForm.ControlTextarea1">
                   <Form.Label>LOCATION</Form.Label>
-                    <Form.Control as="textarea" rows="3" name="location" value={this.state.location}
+                    <Form.Control as="textarea" rows="3" name="location" style={{'backgroundColor': '#ffe9e9'}} value={this.state.location}
                     onChange={this.handleChange} required/>
                  </Form.Group>
               </Form>
@@ -129,7 +129,7 @@ onChange = appointment_date => this.setState({ appointment_date })
                 </p>
 
               <Card.Footer className="text-muted">
-                  <Button variant="btn btn-outline-info btn-md " onClick={this.handleClick}  >
+                  <Button variant="btn btn-info btn-md " onClick={this.handleClick}  >
                     REQUEST A BOOKING
                   </Button>
               </Card.Footer>

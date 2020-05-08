@@ -50,7 +50,7 @@ fetchAppointments = () => {
         <hr id="welcome" />
         <Table striped bordered hover variant="dark" responsive className="table">
           <thead>
-            <tr style={{'text-align': 'center'}}>
+            <tr style={{'textAlign': 'center'}}>
               <th>Client Name</th>
               <th>Client Email</th>
               <th>Service</th>

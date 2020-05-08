@@ -6,7 +6,7 @@ export default () => {
     <div>
     <div className="container-fluid padding">
       <div className="row padding">
-        <div className="col" >
+        <div className="col" style={{'padding': '0'}} >
           <img src="images/landing-img.jpg" className="img-fluid main-img" alt="retro" />
             <div className="carousel-caption">
               <h1>WE BRING BEAUTY TO YOU</h1>

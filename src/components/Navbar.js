@@ -26,8 +26,8 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <Navbar bg="light" expand="lg" className="sticky-top">
-      <Container>
+      <Navbar bg="light" expand="lg" className="sticky-top" style={{'margin': '0', 'padding': '0'}} >
+      <Container style={{'background': '#67a8bd'}}>
         <Navbar.Brand href="/" className="logo">GlamB</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -42,28 +42,22 @@ export default class Navigation extends Component {
                 <NavDropdown title={
                     <span className="dropdown-style ">{this.props.user.name}</span>
                 } id="basic-nav-dropdown" >
-                <NavDropdown.Item className="user-nav">
-                  <Nav.Link as={Link} to="/card" className="user-nav">
+                <NavDropdown.Item as={Link} to="/card">
                     My appointments
-                  </Nav.Link>
                 </NavDropdown.Item>
 
                 {this.props.user.admin
                 ? (
-                    <NavDropdown.Item className="user-nav ">
-                      <Nav.Link as={Link} to={`/bookings`} className="user-nav">
+                    <NavDropdown.Item  as={Link} to={`/bookings`}>
                         All bookings
-                      </Nav.Link>
                     </NavDropdown.Item>
                   )
                 : null
               }
 
-                <div class="dropdown-divider"></div>
-                <NavDropdown.Item>
-                  <Nav.Link as={Link} to="/logout" onClick={this.handleClick} className="user-nav" >
+                <div className="dropdown-divider"></div>
+                <NavDropdown.Item as={Link} to="/logout" onClick={this.handleClick}>
                     Log Out
-                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
             </>
