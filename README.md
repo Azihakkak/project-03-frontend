@@ -1,4 +1,4 @@
-Project 03
+Project 03 / GlamB
 =================================
 
 This app will help people to request beauty services such as makeup just by providing the time, date and location and wait to be contacted by the admin.
